@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+file = open("/home/vsi/python_sample_file/result",'r')
+
+vector = []
+
+#while 1:
+for i in range(10):
+	read_data = file.readline()
+	if not read_data: break
+	
+	split_data = read_data.split(",")
+	new_data = split_data[0]
+	vector.insert(i,new_data)
+
+print(vector)
+		
